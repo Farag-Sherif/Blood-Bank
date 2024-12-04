@@ -1,0 +1,96 @@
+.background{
+    min-height: 100vh;
+    background-image: url(../image/campaing-page/campaing-bg.jpg);
+    background-size: cover;
+	background-position: center;
+}
+.landing .content{
+    width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+	text-align: center;
+}
+.landing img{
+	    width: 20rem;
+}
+.landing h1{
+	font-size: 7rem;
+    color: var(--red);
+    text-transform: uppercase;
+}
+.landing .history{
+    border: 2px solid;
+    border-color: #777 transparent;
+    width: fit-content;
+    padding: 1rem 0;
+	margin: 2rem auto;
+}
+.landing .history p{
+	font-size: 3rem;
+    text-transform: uppercase;
+    color: #777;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+.landing .history h3{
+	color: var(--red);
+    font-size: 1.6rem;
+}
+.landing p{
+    font-size: 1.6rem;
+    color: #777;
+    margin: 3rem 0;
+}
+.landing i{
+    font-size: 5rem;
+    color: var(--red);
+    margin-bottom: 3rem;
+}
+.landing h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #777;
+}
+@media (max-width: 767px){
+	.landing .content{
+		width: 100%;
+	}
+}
+@media (max-width: 576px){
+	.landing h1{
+		font-size: 4rem;
+	}
+	.landing .history p{
+		font-size: 2rem;
+	}
+	.landing i{
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+	.landing h2{
+		font-size: 2rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

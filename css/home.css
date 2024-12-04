@@ -1,0 +1,220 @@
+
+/* start landing */
+.landing{
+	display: flex;
+    align-items: center;
+	justify-content: center;
+    height: 70vh;
+}
+@media(max-width:767px){
+	.landing{
+		flex-direction:column-reverse;
+		height: fit-content;
+	}
+	.landing .text{
+		text-align: center;
+	}
+}
+.landing h1{
+	font-size: 5rem;
+    color: var(--red);
+    font-weight: bold;
+}
+.landing h4{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0 2rem;
+}
+.landing p{
+    font-size: 1.4rem;
+    color: #777;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+}
+.landing img{
+	width: 50%;
+	mix-blend-mode: darken;
+}
+@media(max-width:767px){
+	.landing img{
+		width: 100%;
+	}
+}
+/* end landing */
+/* start process */
+.process{
+	padding-bottom: var(--main-padding);
+}
+.process .processes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.process .box{
+    width: calc((100% - 6rem)/4);
+}
+@media(max-width:767px){
+	.process .processes{
+		flex-wrap: wrap;
+	}
+	.process .box{
+		width: calc((100% - 2rem)/2);
+	}
+}
+.process .box span{
+    display: block;
+    font-size: 3.5rem;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+.process .box span::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 5rem;
+    height: 5rem;
+    z-index: -1;
+    box-shadow: 0 3px 10px;
+}
+.process .box:first-child span{
+	color: #620aaa;
+}
+.process .box:first-child span::before{
+	background-color: #a83bff;
+}
+.process .box:nth-child(2) span{
+	color: #c9b713;
+}
+.process .box:nth-child(2) span::before{
+	background-color: #ffed4c;
+}
+.process .box:nth-child(3) span{
+	color: #52910a;
+}
+.process .box:nth-child(3) span::before{
+	background-color: #9be841;
+}
+.process .box:last-child span{
+	color: #c00d00;
+}
+.process .box:last-child span::before{
+	background-color: #ff6b60;
+}
+.process .box h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+	color: var(--black);
+}
+.process .box p{
+    color: #777;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+/* end process */
+/* start campaigns */
+.campaigns{
+    padding-bottom: var(--main-padding);
+}
+.campaigns .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.campaigns .head button{
+    color: var(--black);
+    background: white;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+	transition: var(--main-transition);
+}
+.campaigns .head button:hover{
+	color: var(--red);
+}
+.campaigns .boxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.campaigns .box{
+    width: calc((100% - 4rem)/3);
+    padding: 2rem;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 2rem;
+    background: white;
+}
+@media(max-width:767px){
+	.campaigns .boxs{
+		flex-direction: column;
+	}
+	.campaigns .box{
+		width: 350px;
+		max-width: 100%;
+	}
+}
+.campaigns .box img{
+    width: 100%;
+}
+.campaigns .box span{
+    display: block;
+	color: #bfb7b7;
+    font-size: 1.3rem;
+    margin: 1rem 0 .5rem;
+    font-weight: 600;
+}
+.campaigns .box span i{
+	color: var(--red);
+	margin-right: .5rem;
+}
+.campaigns .box h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+	color: var(--black);
+}
+.campaigns .box p{
+    color: #777;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+.campaigns .box span:last-child{
+	margin-top: 1rem;
+}
+/* end campaigns */
+/* start helpful information */
+.helpful{
+	background-image: linear-gradient(180deg, #fdf6f6 0%, #fbffde 50%, #fdf6f6 100%);
+}
+.helpful-Information{
+    padding: var(--main-padding) 2rem;
+}
+.helpful-Information h3{
+	font-size: 4rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 1.5rem;	
+}
+.helpful-Information li{
+	font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+	color: #353232;
+}
+.helpful-Information li i{
+    margin-right: 1rem;
+}
+/* end helpful information */
+/* start Schedule Form */
+.Schedule-Form{
+	padding-bottom: var(--main-padding);
+}
+/* end Schedule Form */

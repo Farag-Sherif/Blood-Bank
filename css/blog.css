@@ -1,0 +1,177 @@
+/* start landing */
+.blog .title{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+.blog .banner{
+	height: 50rem;
+    margin-bottom: var(--main-padding);
+    background: url(../image/blog-page/blood.png);
+    border-radius: 2rem;
+	background-size: cover;
+}
+/* end landing */
+/* start articles */
+.articles{
+    padding: var(--main-padding) 0;
+}
+.articles .person .profile{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+.articles .person .profile img{
+    width: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.articles .person .profile p:first-child{
+	margin-bottom: 1rem;
+}
+.articles .topics a,
+.articles .topics span,
+.articles h3,
+.articles p{
+    font-size: 2rem;
+    color: #404040;
+    margin-bottom: 2rem;
+	font-family: "MarkWebPro-Book-W03-Regular";
+}
+.articles h3{
+	color: var(--black);
+}
+.articles .topics a,
+.articles p a{ 
+	color: #404040;
+	transition: var(--main-transition);
+	text-decoration: underline;
+}
+.articles .topics a:hover,
+.articles p a:hover{
+	color: var(--red);
+}
+.articles .image{
+    width: 50rem;
+    max-width: 100%;
+	position: relative;
+	border-radius: 2rem;
+    overflow: hidden;
+	margin: var(--main-padding) 0;
+}
+.articles .image::before{
+	content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0000009e;
+	opacity: 0;
+	transition: var(--main-transition);
+}
+.articles .image:hover .social a,
+.articles .image:hover::before{
+	opacity: 1;
+}
+.articles .image .social{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+	padding:1rem;
+}
+.articles .image .social a{
+	font-size: 3.5rem;
+    color: var(--background);
+	padding: 0 .5rem;
+	opacity: 0;
+	transition: var(--main-transition);
+}
+.articles .image .social a:hover{
+	color: var(--red);
+}
+.articles .image img{
+	width: 100%;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+.articles .topics span,
+.articles .topics a{
+	padding: 0.5rem;
+}
+/* end articles */
+.more-articles{
+	padding-bottom: var(--main-padding);
+}
+.more-articles h1{
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: var(--main-padding);
+    color: var(--black);
+}
+.more-articles .box{
+    width: 60rem;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 2rem;
+    background: white;
+    overflow: hidden;
+	height: 100%;
+}
+.box img{
+    width: 100%;
+	height: 35rem;
+}
+.box a{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+    font-weight: bold;
+	transition: var(--main-transition);
+}
+.box .text{
+	padding: 2rem;
+}
+.box .text  span,
+.box .text p a,
+.box .text p{
+	font-size: 1.6rem;
+    color: var(--black);
+    margin: 1rem 0;
+}
+.box .text p span,
+.box .text p a{
+	color: #777;;
+}
+.box .text  span{
+	font-weight: bold;
+}
+.box a:hover,
+.box .text p a:hover{
+	color: var(--red);
+}
+.box .text p a:hover{
+	text-decoration: underline;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.swiper-wrapper{
+	display: flex;
+}
+.swiper-slide {
+	background: #fff;
+    width: 60rem!important;
+	border-radius: 2rem;
+}
+@media(max-width: 767px){
+	.more-articles .box,
+	.swiper-slide {
+		width: 25rem!important;
+	}
+}
+.swiper {
+	width: 100%;
+	margin: 20px auto;
+}

@@ -1,0 +1,159 @@
+/* background of log page */
+.sing-up{
+	min-height: 100vh;
+    background: rgb(255 255 255 / 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sing-up::before{
+    content: "";
+    background-image: url(../image/sing-up-page/world-blood-donor-day.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    top: 0;
+}
+.sing-up::after{
+    content: "";
+    background-image: url(../image/sing-up-page/world-blood-donor-day-background-with-earth-map.avif);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    z-index: -1;
+    right: 0;
+    top: 0;
+}
+/* content of log page */
+.sing-up-landing{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 992px){
+	.sing-up-landing{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: var(--main-padding);
+	}
+}
+/* left text of sing up page */
+.sing-up-landing .text{
+	width: 30%;
+	padding: 3rem 0;
+}
+.sing-up-landing .text h1{
+	font-size: 3rem;
+    font-weight: bold;
+    color: var(--red);
+    margin-bottom: 2.5rem;	
+}
+.sing-up-landing .text p{
+	font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.5;	
+}
+@media(max-width: 992px){
+	.sing-up-landing .text{
+		width: 40rem;
+		max-width: 100%;
+		text-align: center;
+	}
+}
+/* question about if you have/not current page */
+.sing-up-form .other-way{
+	text-align: end;
+    font-size: 1.6rem;
+    color: #737373;
+	margin-bottom: 2rem;
+}
+.sing-up-form .other-way a{
+    color: var(--red);
+    font-weight: bold;
+}
+/* forms of log pages */
+.sing-up-landing .sing-up-form{
+	width: 65%;
+    padding: 3rem;
+}
+.log-in-landing{
+	justify-content: center;
+	align-items: center;
+}
+@media(max-width: 992px){
+	.sing-up-landing .sing-up-form{
+		width: 60rem;
+		max-width: 100%;
+		padding: 0;
+	}
+}
+.sing-up-form .sub{
+	background: #eeeeeeb3;
+    padding: 0 var(--main-padding) var(--main-padding);
+    border-radius: 1rem;
+    max-width: 100%;
+    box-shadow: 0 0 10px #737373;
+}
+.sing-up-form .form .title{
+	text-align: center;
+	width: 100%;
+	margin: 0;
+}
+.sing-up-form .agree{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sing-up-form .agree input{
+	position: relative;
+	width: 0;
+	-webkit-appearance: none;
+    appearance: none;
+}
+.sing-up-form .agree label{
+	font-size: 1.3rem;
+    line-height: 1.5;
+	position: relative;
+	margin-left: 3rem;
+}
+.sing-up-form .agree label::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--red);
+    border-radius: 0.6rem;
+}
+.sing-up-form .agree label::after{
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: -3rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    text-align: center;
+    background-color: var(--red);
+    border-radius: 0.6rem;
+    color: white;
+	transform: scale(0) rotate(-180deg);
+	transition: var(--main-transition);
+}
+.sing-up-form .agree input:checked + label::after{
+	transform: scale(1) rotate(0deg);
+}
+.sing-up-form .button{
+    margin: 1rem auto 0;
+    display: block;
+    width: 30rem;
+	max-width: 100%;
+}

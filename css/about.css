@@ -1,0 +1,164 @@
+.about-background{
+    background: url(../image/about-page/about-bg-landing.png);
+    background-position: bottom;
+    background-size: contain;
+}
+/* start landing */
+.about-landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	margin: 2rem 0 var(--main-padding);
+	height: 40vh;
+}
+.about-landing i{
+	color: #94012d;
+	font-size: 7rem;
+	margin: 2rem 0;
+}
+.about-landing h1{
+	font-size: 6rem;
+    color: var(--red);
+    font-weight: bold;
+	text-transform: uppercase;
+}
+@media(max-width:767px){
+	.about-landing h1{
+		font-size: 4rem;
+	}
+}
+.about-landing h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+/* end landing */
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+.serv{
+	border: 1px solid #7373;
+    padding: 1rem;
+    border-radius: 0.6rem;
+	width: calc((100% - 4.5rem)/4);
+	background: white;
+}
+@media(max-width: 767px){
+	.serv{
+		width: 20rem;
+		max-width: 100%;
+	}
+}
+.services i{
+	font-size: 2rem;
+    padding: 0.5rem;
+    background: white;
+    border: 1px solid #7373;
+	margin-bottom: 3rem;
+	display: block;
+	width: fit-content;
+	border-radius: 0.6rem;
+}
+.services h3{
+	font-size: 1.6rem;
+    color: var(--black);
+}
+.services p{
+    font-size: 1.3rem;
+    color: #777;
+    margin: 0.5rem 0;
+}
+.services a{
+    color: #454545;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    font-weight: bold;
+	transition: var(--main-transition);
+}
+.services a:hover{
+	color: var(--red);
+}
+/* end services */
+/* start Frequently asked questions */
+.Frequently{
+    padding: var(--main-padding) 0;
+}
+.Frequently h3{
+    font-size: 4rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: var(--main-padding);
+}
+.Frequently .questions{
+    text-align: center;
+    width: 40rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.Frequently .text .question,
+.Frequently .questions .box{
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.Frequently .qui-icon{
+	font-size: 2rem;
+    padding: 0.5rem;
+    background: white;
+    border: 1px solid #7373;
+	display: block;
+	width: fit-content;
+	border-radius: 0.6rem;
+}
+.Frequently .text {
+	flex: 1;
+}
+.Frequently .text .question{
+	justify-content: space-between;
+	font-size: 1.6rem;
+	color: #282727;
+	cursor: pointer;
+	transition: var(--main-transition);
+}
+.Frequently .text .question:hover{
+	color: var(--red);
+}
+.Frequently .text p{
+	font-size: 1.4rem;
+	color: #777;
+    text-align: start;
+	display: none;
+}
+/* end Frequently asked questions */
+
+.anyquestion{
+    padding: var(--main-padding) 0;
+    text-align: center;
+}
+.anyquestion h3{
+    font-size: 3rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.anyquestion p{
+	font-size: 1.4rem;
+	color: #777;
+}
+.anyquestion .try{
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+	width: 30rem;
+    max-width: 100%; 
+    margin: 2rem auto;
+}
+.anyquestion .button.view{
+	background: white;
+	color: var(--black);
+}
