@@ -1,4 +1,15 @@
-import { addClassActive } from './component.js'; 
+// function of add active class
+
+function addClassActive(element , scroll){
+	
+	const positionOfElement = element.offsetTop - 700;
+	
+	if(positionOfElement <= scroll){
+	
+		element.classList.add('active')
+	
+	}
+} 
 
 // animation of sections in home page
 document.addEventListener('scroll', function() {
