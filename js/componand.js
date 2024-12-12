@@ -31,18 +31,7 @@ document.addEventListener('scroll', function() {
 	
 });
 
-// function of add active class
 
-export function addClassActive(element , scroll){
-	
-	const positionOfElement = element.offsetTop - 700;
-	
-	if(positionOfElement <= scroll){
-	
-		element.classList.add('active')
-	
-	}
-}
 
 
 
