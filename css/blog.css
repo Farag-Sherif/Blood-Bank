@@ -3,6 +3,8 @@
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
+	transform: translateX(0);
+	opacity: 1;
 }
 .blog .banner{
 	height: 50rem;

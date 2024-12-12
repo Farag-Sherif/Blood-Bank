@@ -6,6 +6,9 @@
 	justify-content: center;
     height: 70vh;
 }
+.landing .text{
+	animation: move-up var(--animation-transition);
+}
 @media(max-width:767px){
 	.landing{
 		flex-direction:column-reverse;
@@ -34,6 +37,7 @@
 .landing img{
 	width: 50%;
 	mix-blend-mode: darken;
+	animation: move-up var(--animation-transition);
 }
 @media(max-width:767px){
 	.landing img{
@@ -50,6 +54,13 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+	transform: translateY(10rem);
+	opacity: 0;
+	transition: var(--animation-transition);
+}
+.process .processes.active{
+	transform: translateY(0);
+	opacity: 1;
 }
 .process .box{
     width: calc((100% - 6rem)/4);
@@ -152,6 +163,13 @@
     box-shadow: 0 0 10px #eee;
     border-radius: 2rem;
     background: white;
+	transform: translateY(10rem);
+	opacity: 0;
+	transition: var(--animation-transition);
+}
+.campaigns .box.active{
+	transform: translateY(0);
+	opacity: 1;
 }
 @media(max-width:767px){
 	.campaigns .boxs{
@@ -196,6 +214,13 @@
 }
 .helpful-Information{
     padding: var(--main-padding) 2rem;
+	transform: translateX(-10rem);
+	opacity: 0;
+	transition: var(--animation-transition);
+}
+.helpful-Information.active{
+	transform: translateX(0);
+	opacity: 1;
 }
 .helpful-Information h3{
 	font-size: 4rem;

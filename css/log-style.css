@@ -78,6 +78,10 @@
     font-weight: bold;
 }
 /* forms of log pages */
+.sing-up-form .title{
+	transform: translateX(0);
+	opacity: 1;
+}
 .sing-up-landing .sing-up-form{
 	width: 65%;
     padding: 3rem;

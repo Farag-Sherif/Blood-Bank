@@ -16,12 +16,14 @@
 	color: #94012d;
 	font-size: 7rem;
 	margin: 2rem 0;
+	animation: move-up var(--animation-transition);
 }
 .about-landing h1{
 	font-size: 6rem;
     color: var(--red);
     font-weight: bold;
 	text-transform: uppercase;
+	animation: move-up var(--animation-transition);
 }
 @media(max-width:767px){
 	.about-landing h1{
@@ -31,6 +33,7 @@
 .about-landing h3{
     font-size: 1.6rem;
     font-weight: bold;
+	animation: move-up var(--animation-transition);
 }
 /* end landing */
 .services{
@@ -46,6 +49,7 @@
     border-radius: 0.6rem;
 	width: calc((100% - 4.5rem)/4);
 	background: white;
+	animation: move-up var(--animation-transition);
 }
 @media(max-width: 767px){
 	.serv{
@@ -92,14 +96,14 @@
     color: var(--black);
     text-align: center;
     margin-bottom: var(--main-padding);
+	animation: move-up var(--animation-transition);
 }
 .Frequently .questions{
-    text-align: center;
     width: 40rem;
     max-width: 100%;
     margin: 0 auto;
+	animation: move-up var(--animation-transition);
 }
-.Frequently .text .question,
 .Frequently .questions .box{
     display: flex;
     align-items: baseline;
@@ -115,14 +119,20 @@
 	width: fit-content;
 	border-radius: 0.6rem;
 }
+.Frequently .question i.active{
+	transform: rotate(180deg);
+}
 .Frequently .text {
 	flex: 1;
 }
 .Frequently .text .question{
+    display: flex;
+	align-items: center;
 	justify-content: space-between;
 	font-size: 1.6rem;
 	color: #282727;
 	cursor: pointer;
+    margin-bottom: .5rem;
 	transition: var(--main-transition);
 }
 .Frequently .text .question:hover{
@@ -133,6 +143,31 @@
 	color: #777;
     text-align: start;
 	display: none;
+}
+.Frequently .text p.active{
+	display: block;
+}
+.Frequently .loading{
+    width: 3.6rem;
+    display: none;
+    height: 3.6rem;
+    margin: 2rem auto;
+    border-radius: 50%;
+    background: #fdf6f6;
+    position: relative;
+}
+.Frequently .loading::before{
+    content: "";
+    position: absolute;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    background: linear-gradient( var(--red) 15% , #fdf6f6 75%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+	animation: rotate var(--main-transition) infinite linear;
+    z-index: -1;
 }
 /* end Frequently asked questions */
 
@@ -161,4 +196,17 @@
 .anyquestion .button.view{
 	background: white;
 	color: var(--black);
+}
+
+
+
+
+
+@keyframes rotate{
+	from{
+		transform: translate(-50% , -50%) rotate(0deg);
+	}
+	to{
+		transform: translate(-50% , -50%) rotate(360deg);
+	}
 }

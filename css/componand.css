@@ -3,6 +3,7 @@
 	--black: black;
 	--button-hover: #ba2b2b;
     --main-transition: 0.5s;
+	--animation-transition: 2s;
     --main-padding: 5rem;
     --background: white;
 }
@@ -74,6 +75,13 @@ ul{
     padding: var(--main-padding) 0;
 	width: 60rem;
 	max-width:100%;
+	transform: translateX(-10rem);
+	opacity: 0;
+	transition: var(--animation-transition);
+}
+.title.active{
+	transform: translateX(0);
+	opacity: 1;
 }
 .title h3{
     font-size: 3.5rem;
@@ -131,7 +139,6 @@ ul{
     border-radius: 3rem;
 	position: relative;
     box-shadow: 0 0 10px #eee;
-	overflow: hidden;
 }
 .header .logo{
 	flex:1;
@@ -159,10 +166,9 @@ ul{
     align-items: center;
 	flex: 3;
 }
-@media(max-width:767px){
-	.header .list{
-		display: none;
-	}
+.header .list.active{
+	opacity: 1;
+	visibility: visible;
 }
 .header ul{
     display: flex;
@@ -180,6 +186,10 @@ ul{
 		background-color: var(--background);
 		padding: 2rem;
 		border-radius: 2rem;
+		opacity: 0;
+		transition: var(--main-transition);
+		visibility: collapse;
+		z-index: 10;
 	}
 	.header .list ul{
 		flex-direction: column;
@@ -211,15 +221,22 @@ ul{
     width: 80%;
     color: white;
     border-radius: 0 3rem 0 0;
+	transition: var(--animation-transition);
 }
 .start.ltr{
 	margin: var(--main-padding) auto var(--main-padding) 0;
 	border-radius: 0 3rem 0 0;
+	opacity: 0;
+	transform: translateX(-10rem);
 }
 .start.rtl{
 	margin: var(--main-padding) 0 var(--main-padding) auto;
 	border-radius: 3rem 0 0 0;
     text-align: center;
+}
+.start.active{
+	transform: translateX(0);
+	opacity: 1;
 }
 @media(max-width: 767px){
 	.start{
@@ -377,4 +394,42 @@ footer .social a {
     margin: 5px;
     transition: var(--main-transition);
 }
+footer p{
+	padding: 4rem 0;
+	font-size: 1.6rem;
+	text-align: center;
+	color: var(--red);
+}
+footer a{
+	font-size: 2rem;
+	color: #eee;
+}
+footer span{
+	color: #f85a40;
+}
 /* end footer */
+/* start move up bottom */
+.move-up{
+    position: fixed;
+    bottom: var(--main-padding);
+    right: var(--main-padding);
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--red);
+    color: white;
+    font-size: 2rem;
+	opacity: 0;
+	visibility: collapse;
+	transition: var(--main-transition);
+}
+/* end move up botton */
+@keyframes move-up{
+	0%{
+		transform: translateY(10rem);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
