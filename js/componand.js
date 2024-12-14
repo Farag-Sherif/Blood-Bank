@@ -31,12 +31,49 @@ document.addEventListener('scroll', function() {
 	
 });
 
+// function of add active class
 
+function addClassActive(element , scroll){
+	
+	const topOfElement = element.offsetTop - 700;
+	
+	if(topOfElement <= scroll){
+	
+		element.classList.add('active')
+	}
+}
 
+// loading more element when click on load More in about page or click on see More in home page
 
+function displayMore (Element , range , boxs , typeOfDisplay){
+	Element.addEventListener('click', ()=>{
+		const loading = document.querySelector('.loading');
+		loading.style.display = 'block';
+		Element.style.display = 'none'
+		setTimeout(()=>{
+			if(range < boxs.length){
+				range += 6;
+				let loadMore = boxs.filter((element, index)=> 
+				{ 
+					element.style.display= (index < range? typeOfDisplay : 'none')
+				})
+			Element.style.display = 'block'
+			}
+			if(range >= boxs.length -1){
+				Element.style.display = 'none'
+			}
+			loading.style.display = 'none';
+		}, 1000);
+	})
+}
 
+// display Element after rewright range
 
-
+function displayElement(element , index , range){
+	if(index > range){
+		element.style.display = 'none'
+	}
+}
 
 
 

@@ -25,7 +25,7 @@
 			<div class="sing-up-form">
 				<p class="other-way">Lorem ipsum dolor sit amet? <a href="log-in.html">Log In</a></p>
 				<div class="sub">
-					<form class="form" action="">
+					<form class="form" id="form">
 						<div class="title">
 							<h3>Appoinment Schedule Form</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -33,25 +33,47 @@
 							aliqua. Ut enim ad minim veniam,</p>
 						</div>
 						<div>
-							<input type="text" placeholder="Enter your Name">
+							<input
+							type="text" 
+							id="name" 
+							placeholder="Enter your Name" 
+							>
 						</div>
 						<div>
-							<input type="email" placeholder="Enter your E-mail">
+							<input 
+							type="email" 
+							id="email" 
+							placeholder="Enter your E-mail"
+							>
 						</div>
 						<div class="double-input-inline">
 							<div>
-								<input type="password" placeholder="Enter Password">
+								<input
+								type="password"
+								id="password" 
+								placeholder="Enter Password"
+								>
 							</div>
 							<div>
-								<input type="password" placeholder="Confirm Password">
+								<input 
+								type="password" 
+								id="confirm-password" 
+								placeholder="Confirm Password"
+								>
 							</div>
 						</div>
 						<div class="double-input-inline">
 							<div>
-								<input type="text" placeholder="+20 1111 1111 11">
+								<input 
+								type="text" 
+								id="phone"
+								placeholder="+20 1111 1111 11"
+								>
 							</div>
 							<div>
-								<select>
+								<select 
+								id="city" 
+								>
 									<option selected>City</option>
 									<option>Cairo</option>
 									<option>Giza</option>
@@ -62,7 +84,9 @@
 						</div>
 						<div class="double-input-inline">
 							<div>
-								<select>
+								<select
+								id="type-of-blood" 
+								>
 									<option selected>Blood Type</option>
 									<option>O+</option>
 									<option>O-</option>
@@ -72,21 +96,27 @@
 								</select>
 							</div>
 							<div>
-								<input type="date">
+								<input 
+								type="date"
+								id="birthday" 
+								>
 							</div>
 						</div>
+						<p class="error-message"></p>
+						<div class="agree">
+							<input type="checkbox" id="agree" name="agree">
+							<label for="agree">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut enim ad minim veniam,</label>
+						</div>
+						<button class="button"  type="submit">Sing Up</button>
 					</form>
-					<div class="agree">
-						<input type="checkbox" id="agree" name="agree">
-						<label for="agree">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam,</label>
-					</div>
-					<button class="button">Sing Up</button>
 				</div>
 			</div>
 			<!-- start Schedule Form -->
 		</div>
 	</div>
+	<!-- start js files -->
+	<script src="js/log-in.js"></script>
 	</body>
 </html>

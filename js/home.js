@@ -1,15 +1,3 @@
-// function of add active class
-
-function addClassActive(element , scroll){
-	
-	const positionOfElement = element.offsetTop - 700;
-	
-	if(positionOfElement <= scroll){
-	
-		element.classList.add('active')
-	
-	}
-} 
 
 // animation of sections in home page
 document.addEventListener('scroll', function() {
@@ -39,3 +27,31 @@ document.addEventListener('scroll', function() {
 	
 	addClassActive(document.querySelector('.helpful .helpful-Information') , positionOfScroll)
 });
+
+// add class name to all boxs in campaigns 
+
+let campaigns = document.querySelector('.campaigns .boxs')
+
+let boxsOfCampaigns = [...Array.from(campaigns.children)];
+
+let reangeOfCampaigns = 2;
+
+boxsOfCampaigns.forEach((element , index)=>{
+	
+	element.classList.add(`campaign-${index}`);
+	
+	displayElement(element , index , reangeOfCampaigns);
+})
+
+// loading more element when click on see More in home page
+
+let loadMoreCampaigns = document.querySelector('.campaigns .see-more')
+
+displayMore(loadMoreCampaigns , reangeOfCampaigns , boxsOfCampaigns , 'block')
+
+
+
+
+
+
+

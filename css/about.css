@@ -147,28 +147,6 @@
 .Frequently .text p.active{
 	display: block;
 }
-.Frequently .loading{
-    width: 3.6rem;
-    display: none;
-    height: 3.6rem;
-    margin: 2rem auto;
-    border-radius: 50%;
-    background: #fdf6f6;
-    position: relative;
-}
-.Frequently .loading::before{
-    content: "";
-    position: absolute;
-    width: 4.4rem;
-    height: 4.4rem;
-    border-radius: 50%;
-    background: linear-gradient( var(--red) 15% , #fdf6f6 75%);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-	animation: rotate var(--main-transition) infinite linear;
-    z-index: -1;
-}
 /* end Frequently asked questions */
 
 .anyquestion{
@@ -196,17 +174,4 @@
 .anyquestion .button.view{
 	background: white;
 	color: var(--black);
-}
-
-
-
-
-
-@keyframes rotate{
-	from{
-		transform: translate(-50% , -50%) rotate(0deg);
-	}
-	to{
-		transform: translate(-50% , -50%) rotate(360deg);
-	}
 }

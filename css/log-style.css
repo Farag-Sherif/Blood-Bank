@@ -119,6 +119,7 @@
 	width: 0;
 	-webkit-appearance: none;
     appearance: none;
+	padding: 0;
 }
 .sing-up-form .agree label{
 	font-size: 1.3rem;
@@ -151,6 +152,11 @@
     color: white;
 	transform: scale(0) rotate(-180deg);
 	transition: var(--main-transition);
+}
+.sing-up-form .error-message{
+	font-size: 1.6rem;
+    color: var(--red);
+	margin-bottom: 2rem;
 }
 .sing-up-form .agree input:checked + label::after{
 	transform: scale(1) rotate(0deg);
