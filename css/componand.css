@@ -319,7 +319,7 @@ ul{
 }
 .form .incorrect{
 	border-color: var(--red);
-    box-shadow: 0 0 45px var(--red) inset;
+    box-shadow: 0 0 10px var(--red) inset;
 }
 /* end form */
 /* start footer */
