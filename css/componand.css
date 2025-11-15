@@ -324,7 +324,7 @@ ul{
 /* end form */
 /* start footer */
 footer{
-	background: #777;
+	background: var(--background);
     padding: var(--main-padding) 0;
 }
 .footer{
@@ -469,4 +469,5 @@ footer span{
 		opacity: 1;
 	}
 }
+
 
